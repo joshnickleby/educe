@@ -5,8 +5,9 @@ import gitbox.domain.individuals.LambdaDirector;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
+import java.util.function.Supplier;
 
-public class Decrypt implements Runnable {
+public class Decrypt implements Supplier<String> {
 
     // This starts as a cipher text and ends as a plain text
     private String cipherText;
@@ -30,7 +31,7 @@ public class Decrypt implements Runnable {
      *  then runs each function in sequence.
      **/
     @Override
-    public void run() {
+    public String get() {
 
         show.domain.StringCipher sc = new show.domain.StringCipher();
 
@@ -47,5 +48,6 @@ public class Decrypt implements Runnable {
 
         cipherText = LambdaDirector.decrypt.apply(cipherText, sc);
 
+        return cipherText;
     }
 }
