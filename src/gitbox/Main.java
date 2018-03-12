@@ -1,8 +1,14 @@
 package gitbox;
 
+import gitbox.domain.Decrypt;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+//        DecryptTest.runTest("all");
+
+        Decrypt decrypt = new Decrypt();
+
+        decrypt.run();
     }
 }
