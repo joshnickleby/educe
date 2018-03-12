@@ -10,7 +10,7 @@ public class Decrypt implements Runnable {
 
     private String cipherText;
 
-    private List<Function<String, String>> decryptions = Arrays.asList(
+    public List<Function<String, String>> decryptions = Arrays.asList(
             LambdaDirector.individualNumbers,
             LambdaDirector.listOfStringNumbers,
             LambdaDirector.removeMeeSeek,

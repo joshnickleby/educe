@@ -1,13 +1,16 @@
 package gitbox;
 
 import gitbox.domain.Decrypt;
+import gitbox.domain.individuals.LambdaDirector;
+import show.test.DecryptTest;
 
 public class Main {
 
     public static void main(String[] args) {
-//        DecryptTest.runTest("all");
-
         Decrypt decrypt = new Decrypt();
+
+        DecryptTest dt = new DecryptTest(LambdaDirector.decrypt, decrypt.decryptions);
+        dt.runTest("all");
 
         decrypt.run();
     }
