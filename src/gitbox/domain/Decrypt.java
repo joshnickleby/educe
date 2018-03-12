@@ -8,8 +8,13 @@ import java.util.function.Function;
 
 public class Decrypt implements Runnable {
 
+    // This starts as a cipher text and ends as a plain text
     private String cipherText;
 
+    /**
+     *  The different functions for decrypting. They are out of order so you have to
+     *  figure out the order. The decrypt function lives in the run part of the class.
+     **/
     public List<Function<String, String>> decryptions = Arrays.asList(
             LambdaDirector.individualNumbers,
             LambdaDirector.listOfStringNumbers,
@@ -19,6 +24,11 @@ public class Decrypt implements Runnable {
             LambdaDirector.revertNumberBeginning
     );
 
+    /** Interface method
+     *
+     *  Creates the cipher text (needs a new key every time it runs), gets the encrypted string,
+     *  then runs each function in sequence.
+     **/
     @Override
     public void run() {
 
@@ -30,12 +40,12 @@ public class Decrypt implements Runnable {
 
         System.out.println(cipherText);
 
-        cipherText = LambdaDirector.decrypt.apply(cipherText, sc);
-
         for(int i = 0; i < decryptions.size(); i++) {
             cipherText = decryptions.get(i).apply(cipherText);
             System.out.println((1+i) + " : " + cipherText);
         }
+
+        cipherText = LambdaDirector.decrypt.apply(cipherText, sc);
 
     }
 }

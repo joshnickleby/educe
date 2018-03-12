@@ -9,10 +9,12 @@ import java.util.function.Function;
 
 public class LambdaDirector {
 
+    // Your options for cipher algorithms - find the right one
     public static List<String> cipherTypes = Arrays.asList(
             "AES", "BES", "CES", "DES"
     );
 
+    // The alphanumeric list for the caesar cipher
     public static List<String> alphabet = Arrays.asList(
             "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
             "a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
@@ -34,7 +36,7 @@ public class LambdaDirector {
         return string;
     };
 
-    // for each letter, starting from the left, subtract its position from each character
+    // A basic caesar cipher. Figure out which index it was switched to.
     public static Function<String, String> caesarCipher = string -> {
         return string;
     };
@@ -44,17 +46,21 @@ public class LambdaDirector {
         return string;
     };
 
-    // turn every letter into a number array
+    // turn every number into a character
     public static Function<String, String> listOfStringNumbers = string -> {
         return string;
     };
 
+    // reverse the numbers in the string
     public static Function<String, String> individualNumbers = string -> {
         return string;
     };
 
+    // reverse the string
     public static Function<String, String> reverseString = string -> {
         return string;
     };
+
+    /** NEED A HINT? CHECKOUT gitbox.include.show.Hints **/
 
 }

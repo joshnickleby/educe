@@ -6,6 +6,7 @@ import show.test.DecryptTest;
 
 public class Main {
 
+    /** First runs the tests and then runs the actual decoding algorithm (comment out things if needed) **/
     public static void main(String[] args) {
         Decrypt decrypt = new Decrypt();
 
