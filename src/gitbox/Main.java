@@ -2,7 +2,7 @@ package gitbox;
 
 import gitbox.domain.Decrypt;
 import gitbox.domain.individuals.LambdaDirector;
-import show.test.DecryptTest;
+import gitbox.domain.tests.DecryptTest;
 
 import java.util.Arrays;
 import java.util.List;
