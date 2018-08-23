@@ -35,7 +35,7 @@ public class LambdaDirector {
 
     // decrypt with StringCipher
     public static BiFunction<String, StringCipher, String> decrypt = (string, cipher) -> {
-        return string;
+        return cipher.decrypt(string, "DES");
     };
 
     // A basic caesar cipher. Figure out which index it was switched to.

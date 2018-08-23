@@ -41,12 +41,12 @@ public class Decrypt implements Supplier<String> {
 
         System.out.println(cipherText);
 
+        cipherText = LambdaDirector.decrypt.apply(cipherText, sc);
+
         for(int i = 0; i < decryptions.size(); i++) {
             cipherText = decryptions.get(i).apply(cipherText);
             System.out.println((1+i) + " : " + cipherText);
         }
-
-        cipherText = LambdaDirector.decrypt.apply(cipherText, sc);
 
         return cipherText;
     }
