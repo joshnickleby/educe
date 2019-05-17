@@ -65,7 +65,7 @@ public class DecryptTest {
     public String compare(String actual, String expected) {
         return actual.equals(expected) ?
                 "PASS: " + expected + "\n" :
-                "FAIL - expected: " + expected + "\n\t\t actual: " + actual + "\n";
+                "FAIL - expected: " + expected + "\n\t\t actual: " + actual + "\n\n";
     }
 
     private List<Supplier<String>> ALL_TESTS = Arrays.asList(
@@ -95,7 +95,7 @@ public class DecryptTest {
     }
 
     private void hiddenFinal(String actual) {
-        System.out.println("FINAL TEST");
+        System.out.println("\nFINAL TEST");
         System.out.println(
                 actual.equals(finalString()) ? "PASS: " + actual :
                         "FAIL: " + actual

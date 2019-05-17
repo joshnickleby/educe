@@ -17,12 +17,12 @@ public class Decrypt implements Supplier<String> {
      *  figure out the order. The decrypt function lives in the run part of the class.
      **/
     public List<Function<String, String>> decryptions = Arrays.asList(
-            LambdaDirector.individualNumbers,
-            LambdaDirector.listOfStringNumbers,
-            LambdaDirector.removeMeeSeek,
-            LambdaDirector.reverseString,
             LambdaDirector.caesarCipher,
-            LambdaDirector.revertNumberBeginning
+            LambdaDirector.listOfStringNumbers,
+            LambdaDirector.revertNumberBeginning,
+            LambdaDirector.reverseString,
+            LambdaDirector.individualNumbers,
+            LambdaDirector.removeMeeSeek
     );
 
     /** Interface method
